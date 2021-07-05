@@ -27,4 +27,5 @@ cask "slack"
 cask "spotify"
 cask "superhuman"
 cask "vscodium"
+mas "Fantastical", id: 975937182
 mas "Paste", id: 967805235
