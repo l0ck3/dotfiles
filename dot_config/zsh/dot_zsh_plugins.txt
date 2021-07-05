@@ -1,0 +1,4 @@
+ellie/atuin
+
+# This should be last
+zdharma/fast-syntax-highlighting

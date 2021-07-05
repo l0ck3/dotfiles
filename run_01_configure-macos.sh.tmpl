@@ -1,0 +1,24 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/usr/bin/env sh
+
+echo "Setting-up macOS preferences"
+
+###############################################################################
+# Keyboard                                                                    #
+###############################################################################
+
+
+###############################################################################
+# Finder                                                                      #
+###############################################################################
+
+# Finder: show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -boolean true
+
+# Finder: show path bar 
+defaults write com.apple.finder ShowPathbar -boolean true
+
+# Restart the Finder
+killall Finder
+
+{{ end -}}

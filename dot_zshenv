@@ -1,0 +1,2 @@
+export EDITOR="codium"
+export VISUAL="codium"

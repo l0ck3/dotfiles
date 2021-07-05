@@ -1,0 +1,31 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/usr/bin/env sh
+
+# Brewfile hash: {{ include "./Brewfile" | sha256sum }}
+
+#==============================================================================
+# main (essential) packages & fonts
+#==============================================================================
+
+### OPTIONS AND VARIABLES ###
+
+readonly BREW_URL='https://raw.githubusercontent.com/Homebrew/install/master/install.sh'
+readonly BREW_FILE='~/.local/share/chezmoi/Brewfile'
+
+### FUNCTIONS ###
+
+brew_install() {
+	if command -v brew >/dev/null 2>&1; then
+		:
+	else
+		/bin/bash -c "$(curl -fsSL $BREW_URL)"
+	fi
+	brew bundle install --no-lock --file=$1
+}
+
+### THE ACTUAL SCRIPT ###
+
+echo "Installing Homebrew packages"
+
+brew_install "$BREW_FILE"
+{{ end -}}

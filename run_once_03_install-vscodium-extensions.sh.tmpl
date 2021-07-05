@@ -1,0 +1,11 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/usr/bin/env sh
+
+# vscode-extensions.txt hash: {{ include "VSCodium/vscode-extensions.txt" | sha256sum }} 
+
+echo "Configuring VSCodium extensions"
+
+codium --install-extension ~/.local/share/chezmoi/VSCodium/dracula-pro.vsix
+xargs -n1 codium --install-extension < ~/.local/share/chezmoi/VSCodium/vscode-extensions.txt
+
+{{ end -}}

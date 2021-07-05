@@ -1,0 +1,2 @@
+ms-kubernetes-tools.vscode-kubernetes-tools
+redhat.vscode-yaml
