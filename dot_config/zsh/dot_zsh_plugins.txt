@@ -1,4 +1,5 @@
 ellie/atuin
+zsh-users/zsh-autosuggestions
 
 # This should be last
 zdharma/fast-syntax-highlighting
