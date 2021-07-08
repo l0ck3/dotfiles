@@ -35,3 +35,7 @@ bindkey "^[[B" history-beginning-search-forward
 
 # Init ASDF
 . $(brew --prefix asdf)/asdf.sh
+
+# Kubectl autocompletion
+
+source <(kubectl completion zsh)

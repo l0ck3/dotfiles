@@ -17,6 +17,8 @@ alias gst='git status'
 
 alias k='kubectl'
 alias wk='watch kubectl'
+alias kns='kubens'
+alias kctx='kubectx'
 
 # SHELL 
 
