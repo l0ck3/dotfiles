@@ -23,3 +23,9 @@ alias kctx='kubectx'
 # SHELL 
 
 alias reload!='exec "$SHELL" -l'
+
+# Terraform
+
+alias tf='terraform'
+alias tg='terragrunt'
+alias terragruik='terragrunt'
