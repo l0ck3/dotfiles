@@ -46,6 +46,10 @@ bindkey "^[[B" history-beginning-search-forward-end
 source <(kubectl completion zsh)
 source <(helm completion zsh)
 
+# Flux autocompletion
+
+command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
+
 # Hook direnv
 
 eval "$(direnv hook zsh)"
