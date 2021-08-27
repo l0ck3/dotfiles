@@ -41,10 +41,11 @@ bindkey "^[[B" history-beginning-search-forward-end
 # Init ASDF
 . $(brew --prefix asdf)/asdf.sh
 
-# Kubectl and Helm autocompletion
+# Kubectl, Kubectx and Helm autocompletion
 
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+
 
 # Flux autocompletion
 
