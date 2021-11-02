@@ -1,4 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
-name = Yann IRBAH
-email = yann.irbah@protonmail.com
+	name = l0ck3
+	email = yann.irbah@gmail.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/
