@@ -36,3 +36,4 @@ cask "superhuman"
 cask "vscodium"
 mas "Fantastical", id: 975937182
 mas "Paste", id: 967805235
+mas "MindNode", id: 1289197285
