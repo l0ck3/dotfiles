@@ -33,5 +33,6 @@ cask "slack"
 cask "spotify"
 cask "superhuman"
 cask "visual-studio-code"
+cask "warp"
 mas "Fantastical", id: 975937182
 mas "MindNode", id: 1289197285
