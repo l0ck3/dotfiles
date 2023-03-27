@@ -1,7 +1,3 @@
-# VSCode
-
-alias code='codium'
-
 # LS 
 
 alias ls='lsd'

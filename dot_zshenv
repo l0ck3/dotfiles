@@ -1,2 +1,2 @@
-export EDITOR="codium --wait"
-export VISUAL="codium --wait"
+export EDITOR="code --wait"
+export VISUAL="code --wait"
