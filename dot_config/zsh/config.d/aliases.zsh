@@ -25,3 +25,7 @@ alias reload!='exec "$SHELL" -l'
 alias tf='terraform'
 alias tg='terragrunt'
 alias terragruik='terragrunt'
+
+# Development
+
+alias gd='doppler run -- garden'
