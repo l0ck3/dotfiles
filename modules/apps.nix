@@ -1,6 +1,7 @@
 {pkgs, ...}: {  
   environment.systemPackages = with pkgs; [
     defaultbrowser
+    nixfmt-classic
     vim
   ];
 
@@ -18,6 +19,8 @@
       "1password"
       "arc"
       "cursor"
+      "spotify"
+      "wezterm"
     ];
     masApps = {
       "Perplexity" = 6714467650;          
