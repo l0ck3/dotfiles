@@ -27,7 +27,7 @@
         ./modules/apps.nix
         home-manager.darwinModules.home-manager
         (import ./modules/home.nix { 
-          inherit username; 
+          inherit username hostname; 
           pkgs = nixpkgs.legacyPackages.${architecture};
         })
         nix-homebrew.darwinModules.nix-homebrew

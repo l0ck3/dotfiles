@@ -1,4 +1,4 @@
-{pkgs, username, ...}: {
+{pkgs, username, hostname, ...}: {
   # User account configuration
   users.users.${username} = {
     name = "${username}";
@@ -15,8 +15,17 @@
       # Don't change this value
       home.stateVersion = "24.11";
       
-      # Enable Home Manager
-      programs.home-manager.enable = true;
+      # Programs
+      programs = {
+        home-manager.enable = true;
+        zsh = {
+          enable = true;
+          shellAliases = {
+            "switch!" = "darwin-rebuild switch --flake .#${hostname}";
+            "reload!" = "source ~/.zshrc";
+          };          
+        };
+      };
 
       # User packages
       home.packages = with pkgs; [
