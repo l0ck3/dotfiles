@@ -1,6 +1,7 @@
 {pkgs, ...}: {  
   environment.systemPackages = with pkgs; [
     defaultbrowser
+    gh
     nixfmt-classic
     vim
   ];
@@ -13,13 +14,19 @@
     };        
     taps = [
       "homebrew/services"
+      "nikitabobko/tap"
     ];
     brews = [];
-    casks = [
+    casks = [      
       "1password"
+      "1password-cli"
+      "aerospace"
       "arc"
       "cursor"
+      "diffusionbee"
+      "karabiner-elements"
       "raycast"
+      "setapp"
       "spotify"
       "wezterm"
       "windsurf"

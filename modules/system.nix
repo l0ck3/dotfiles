@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   system = {
-    stateVersion = 5;    
+    stateVersion = 5;
 
     # activationScripts are executed every time you boot the system or run `nixos-rebuild` / `darwin-rebuild`.
     activationScripts.postUserActivation.text = ''
@@ -17,6 +17,7 @@
 
       finder = {
         ShowPathbar = true;
+        ShowStatusBar = true;
         _FXShowPosixPathInTitle = true;
       };
     };
@@ -32,5 +33,5 @@
       # nerdfonts
       nerd-fonts.fira-code
     ];
-  };  
+  };
 }

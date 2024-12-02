@@ -1,0 +1,10 @@
+{
+  "window.commandCenter": 1,
+  "[nix]": {
+    "editor.defaultFormatter": "brettm12345.nixfmt-vscode"
+  },
+  "workbench.colorTheme": "Sweet Dracula",
+  "windsurf.autocompleteSpeed": "fast",
+  "local-sync.autorestore": true,
+  "basedpyright.analysis.typeCheckingMode": "standard"
+}
