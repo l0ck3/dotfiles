@@ -9,3 +9,9 @@ $env.PATH = [
     "/bin"
     "/sbin"
 ]
+
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
+
+$env.config = {
+  show_banner: false,
+}
