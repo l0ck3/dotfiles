@@ -1,9 +1,4 @@
-{
-  username,
-  hostname,
-  ...
-} @ args:
-{
+{ username, hostname, pkgs, ... }@args: {
   networking.hostName = hostname;
   networking.computerName = hostname;
   system.defaults.smb.NetBIOSName = hostname;
@@ -12,7 +7,8 @@
   users.users."${username}" = {
     home = "/Users/${username}";
     description = username;
+    shell = pkgs.nushell;
   };
 
-  nix.settings.trusted-users = [username];
+  nix.settings.trusted-users = [ username ];
 }

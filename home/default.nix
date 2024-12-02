@@ -4,6 +4,7 @@
   # import sub modules
   imports = [
     ./shell.nix
+    ./nushell.nix
     ./core.nix
     ./git.nix
     ./starship.nix
