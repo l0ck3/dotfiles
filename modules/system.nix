@@ -31,17 +31,6 @@
       font-awesome
       # nerdfonts
       nerd-fonts.fira-code
-      # https://github.com/NixOS/nixpkgs/blob/nixos-24.05/pkgs/data/fonts/nerdfonts/shas.nix
-      # (nerd-fonts.override {
-      #   fonts = [
-      #     # symbols icon only
-      #     "NerdFontsSymbolsOnly"
-      #     # Characters
-      #     "FiraCode"
-      #     "JetBrainsMono"
-      #     "Iosevka"
-      #   ];
-      # })
     ];
   };  
 }
