@@ -19,8 +19,10 @@
       "1password"
       "arc"
       "cursor"
+      "raycast"
       "spotify"
       "wezterm"
+      "windsurf"
     ];
     masApps = {
       "Perplexity" = 6714467650;          

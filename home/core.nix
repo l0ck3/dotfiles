@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     jq # A lightweight and flexible command-line JSON processor
+    neovim # A highly configurable text editor built to make you more productive
     fzf # A command-line fuzzy finder
   ];
 
