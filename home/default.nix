@@ -3,11 +3,12 @@
 {
   # import sub modules
   imports = [
-    ./shell.nix
+    # ./shell.nix
     ./nushell.nix
     ./core.nix
     ./git.nix
     ./starship.nix
+    ./wezterm.nix
   ];
 
   # Home Manager needs a bit of information about you and the
