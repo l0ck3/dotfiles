@@ -3,7 +3,7 @@
 {
   # import sub modules
   imports = [
-    # ./shell.nix
+    ./shell.nix
     ./nushell.nix
     ./core.nix
     ./git.nix
