@@ -27,4 +27,35 @@ bar.apply_to_config(config, {
   },
 })
 
+config.keys = {
+  {
+    key = 'd',
+    mods = 'CMD',
+    action = wezterm.action.SplitPane {
+      direction = 'Right',
+      size = { Percent = 50 },
+      top_level = true,
+    },
+  },
+  {
+    key = 'd',
+    mods = 'SHIFT|CMD',
+    action = wezterm.action.SplitPane {
+      direction = 'Down',
+      size = { Percent = 50 },
+      top_level = false,
+    },
+  },
+  {
+    key = 'w',
+    mods = 'CMD',
+    action = wezterm.action.CloseCurrentPane { confirm = true },
+  },
+  {
+    key = 'w',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.CloseCurrentTab { confirm = true },
+  },
+}
+
 return config
