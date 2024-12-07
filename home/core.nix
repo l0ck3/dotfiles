@@ -6,12 +6,31 @@
   ];
 
   programs = {
-    # A modern replacement for ‘ls’
-    # useful in bash/zsh prompt, not in nushell.
+
+    atuin = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    carapace = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     eza = {
       enable = true;
       git = true;
       icons = "auto";
+      enableZshIntegration = true;
+    };
+
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    zoxide = {
+      enable = true;
       enableZshIntegration = true;
     };
   };

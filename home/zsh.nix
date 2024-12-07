@@ -12,5 +12,6 @@
     "switch!" = "darwin-rebuild switch --flake .#${hostname}";
     "reload!" = "source ~/.zshrc";
     "gst" = "git status";
+    "cd" = "z";
   };
 }
