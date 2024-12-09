@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm'
+-- local projects = require 'projects'
 local config = {}
 
 config.color_scheme = "Catppuccin Mocha"
@@ -8,24 +9,14 @@ config.macos_window_background_blur = 30
 config.window_background_opacity = 0.83
 config.window_decorations = 'RESIZE'
 config.audible_bell = "Disabled"
-config.use_fancy_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = false
+config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
 
-local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
-bar.apply_to_config(config, {
-  position = "bottom",
-  modules = {
-    clock = {
-      enabled = false,
-    },
-    pane = {
-      enabled = false,
-    },
-    cwd = {
-      enabled = false,
-    },
-  },
-})
+config.leader = { key = 'a', mods = 'OPT|CTRL|CMD', timeout_milliseconds = 2000 }
+
+config.set_environment_variables = {
+  PATH = '/opt/homebrew/bin:/etc/profiles/per-user/l0ck3/bin:' .. os.getenv('PATH')
+}
 
 config.keys = {
   {
@@ -52,10 +43,115 @@ config.keys = {
     action = wezterm.action.CloseCurrentPane { confirm = true },
   },
   {
+    key = 'LeftArrow',
+    mods = 'SHIFT|CMD',
+    action = wezterm.action.ActivatePaneDirection 'Left',
+  },
+  {
+    key = 'RightArrow',
+    mods = 'SHIFT|CMD',
+    action = wezterm.action.ActivatePaneDirection 'Right',
+  },
+  {
+    key = 'UpArrow',
+    mods = 'SHIFT|CMD',
+    action = wezterm.action.ActivatePaneDirection 'Up',
+  },
+  {
+    key = 'DownArrow',
+    mods = 'SHIFT|CMD',
+    action = wezterm.action.ActivatePaneDirection 'Down',
+  },        
+  {
     key = 'w',
     mods = 'CMD|SHIFT',
     action = wezterm.action.CloseCurrentTab { confirm = true },
   },
+  {
+    key = 'LeftArrow',
+    mods = 'OPT',
+    action = wezterm.action.SendString '\x1bb',
+  },
+  {
+    key = 'RightArrow',
+    mods = 'OPT',
+    action = wezterm.action.SendString '\x1bf',
+  },  
+  {
+    key = ',',
+    mods = 'CMD',
+    action = wezterm.action.SpawnCommandInNewWindow {
+      cwd = wezterm.home_dir,
+      args = { 'windsurf', '.config/wezterm' },
+    },
+  },
+  -- {
+  --   key = 'p',
+  --   mods = 'LEADER',
+  --   action = projects.choose_project(),
+  -- },
+  -- {
+  --   key = 'f',
+  --   mods = 'LEADER',
+  --   action = wezterm.action.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' },
+  -- },
 }
+
+local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+
+tabline.setup({
+  options = {
+    icons_enabled = true,
+    theme = 'Catppuccin Mocha',
+    color_overrides = {},
+    section_separators = {
+      left = wezterm.nerdfonts.pl_left_hard_divider,
+      right = wezterm.nerdfonts.pl_right_hard_divider,
+    },
+    component_separators = {
+      left = wezterm.nerdfonts.pl_left_soft_divider,
+      right = wezterm.nerdfonts.pl_right_soft_divider,
+    },
+    tab_separators = {
+      left = wezterm.nerdfonts.pl_left_hard_divider,
+      right = wezterm.nerdfonts.pl_right_hard_divider,
+    },
+  },
+  sections = {
+    tabline_a = { 'workspace' },
+    tabline_b = { nil },
+    tab_active = { 'index', { 'process', padding = { left = 0, right = 1 } } },
+    tab_inactive = { 'index', { 'process', padding = { left = 0, right = 1 } } },
+    tabline_x = { 'ram', 'cpu' },
+    tabline_y = { 'battery' },
+    tabline_z = { 'hostname' },
+  },
+  extensions = {},
+})
+
+tabline.apply_to_config(config)
+
+local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
+
+workspace_switcher.apply_to_config(config)
+workspace_switcher.switch_workspace({ extra_args = " | rg -Fxf ~/Workspace" })
+
+wezterm.on("smart_workspace_switcher.workspace_switcher.chosen", function(window, workspace)
+  local gui_win = window:gui_window()
+  local base_path = string.gsub(workspace, "(.*[/\\])(.*)", "%2")
+  gui_win:set_left_status(wezterm.format({
+    { Foreground = { Color = "green" } },
+    { Text = base_path .. "  " },
+  }))
+end)
+
+wezterm.on("smart_workspace_switcher.workspace_switcher.created", function(window, workspace)
+  local gui_win = window:gui_window()
+  local base_path = string.gsub(workspace, "(.*[/\\])(.*)", "%2")
+  gui_win:set_left_status(wezterm.format({
+    { Foreground = { Color = "green" } },
+    { Text = base_path .. "  " },
+  }))
+end)
 
 return config

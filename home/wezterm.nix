@@ -8,4 +8,5 @@ in {
   };
 
   home.file.".config/wezterm/config.lua".source = link "${config.home.homeDirectory}/dotfiles/home/configs/wezterm/config.lua";
+  home.file.".config/wezterm/projects.lua".source = link "${config.home.homeDirectory}/dotfiles/home/configs/wezterm/projects.lua";
 }
