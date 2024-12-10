@@ -136,22 +136,26 @@ local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/s
 workspace_switcher.apply_to_config(config)
 workspace_switcher.switch_workspace({ extra_args = " | rg -Fxf ~/Workspace" })
 
-wezterm.on("smart_workspace_switcher.workspace_switcher.chosen", function(window, workspace)
-  local gui_win = window:gui_window()
-  local base_path = string.gsub(workspace, "(.*[/\\])(.*)", "%2")
-  gui_win:set_left_status(wezterm.format({
-    { Foreground = { Color = "green" } },
-    { Text = base_path .. "  " },
-  }))
-end)
+-- wezterm.on("smart_workspace_switcher.workspace_switcher.chosen", function(window, workspace)
+--   local gui_win = window:gui_window()
+--   local base_path = string.gsub(workspace, "(.*[/\\])(.*)", "%2")
+--   gui_win:set_left_status(wezterm.format({
+--     { Foreground = { Color = "green" } },
+--     { Text = base_path .. "  " },
+--   }))
+-- end)
 
-wezterm.on("smart_workspace_switcher.workspace_switcher.created", function(window, workspace)
-  local gui_win = window:gui_window()
-  local base_path = string.gsub(workspace, "(.*[/\\])(.*)", "%2")
-  gui_win:set_left_status(wezterm.format({
-    { Foreground = { Color = "green" } },
-    { Text = base_path .. "  " },
-  }))
-end)
+-- wezterm.on("smart_workspace_switcher.workspace_switcher.created", function(window, workspace)
+--   local gui_win = window:gui_window()
+--   local base_path = string.gsub(workspace, "(.*[/\\])(.*)", "%2")
+--   gui_win:set_left_status(wezterm.format({
+--     { Foreground = { Color = "green" } },
+--     { Text = base_path .. "  " },
+--   }))
+-- end)
+
+-- local resurrect = wezterm.plugin.require("https://github.com/MLFlexer/resurrect.wezterm")
+
+
 
 return config
