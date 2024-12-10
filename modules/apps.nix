@@ -27,6 +27,7 @@
       "cursor"
       "diffusionbee"
       "karabiner-elements"
+      "orbstack"
       "raycast"
       "setapp"
       "spotify"
