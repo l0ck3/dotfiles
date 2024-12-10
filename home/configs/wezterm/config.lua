@@ -82,7 +82,7 @@ config.keys = {
     mods = 'CMD',
     action = wezterm.action.SpawnCommandInNewWindow {
       cwd = wezterm.home_dir,
-      args = { 'windsurf', '.config/wezterm' },
+      args = { 'windsurf', 'dotfiles' },
     },
   },
   -- {
