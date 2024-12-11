@@ -18,6 +18,7 @@
       "nikitabobko/tap"
     ];
     brews = [
+      "icu4c"
     ];
     casks = [      
       "1password"
