@@ -2,9 +2,9 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    # initExtra = ''
-    #   export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-    # '';
+    initExtra = ''
+      export ERL_AFLAGS="-kernel shell_history enabled"
+    '';
   };
 
   home.shellAliases = {
