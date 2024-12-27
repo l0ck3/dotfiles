@@ -1,4 +1,4 @@
-{pkgs, ...}: {  
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     defaultbrowser
     devbox
@@ -10,17 +10,12 @@
   homebrew = {
     enable = true;
     onActivation = {
-      autoUpdate = false;            
-      cleanup = "zap";            
-    };        
-    taps = [
-      "homebrew/services"
-      "nikitabobko/tap"
-    ];
-    brews = [
-      "icu4c"
-    ];
-    casks = [      
+      autoUpdate = false;
+      cleanup = "zap";
+    };
+    taps = [ "homebrew/services" "nikitabobko/tap" ];
+    brews = [ "icu4c" ];
+    casks = [
       "1password"
       "1password-cli"
       "aerospace"
@@ -29,14 +24,13 @@
       "diffusionbee"
       "karabiner-elements"
       "orbstack"
+      "nordvpn"
       "raycast"
       "setapp"
       "spotify"
       "wezterm"
       "windsurf"
     ];
-    masApps = {
-      "Perplexity" = 6714467650;          
-    };            
+    masApps = { "Perplexity" = 6714467650; };
   };
-} 
+}
