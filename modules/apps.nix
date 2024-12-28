@@ -23,6 +23,8 @@
       "cursor"
       "diffusionbee"
       "karabiner-elements"
+      "kdrive"
+      "obsidian"
       "orbstack"
       "nordvpn"
       "raycast"
