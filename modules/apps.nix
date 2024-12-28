@@ -20,6 +20,7 @@
       "1password-cli"
       "aerospace"
       "arc"
+      "clickup"
       "cursor"
       "diffusionbee"
       "karabiner-elements"
