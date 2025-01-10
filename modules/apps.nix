@@ -23,6 +23,8 @@
       "clickup"
       "cursor"
       "diffusionbee"
+      "guitar-pro"
+      "tuxguitar"
       "karabiner-elements"
       "kdrive"
       "obsidian"
