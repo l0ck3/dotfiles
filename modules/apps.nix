@@ -23,8 +23,8 @@
       "clickup"
       "cursor"
       "diffusionbee"
+      "google-chrome"
       "guitar-pro"
-      "tuxguitar"
       "karabiner-elements"
       "kdrive"
       "obsidian"
@@ -33,6 +33,7 @@
       "raycast"
       "setapp"
       "spotify"
+      "tuxguitar"
       "wezterm"
       "windsurf"
     ];
