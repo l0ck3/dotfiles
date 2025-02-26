@@ -5,6 +5,7 @@
     initExtra = ''
       export ERL_AFLAGS="-kernel shell_history enabled"
       eval "$(devbox global shellenv)"
+      PATH="/Users/l0ck3/.bun/bin:$PATH"
     '';
   };
 
