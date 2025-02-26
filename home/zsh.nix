@@ -4,6 +4,7 @@
     enableCompletion = true;
     initExtra = ''
       export ERL_AFLAGS="-kernel shell_history enabled"
+      eval "$(devbox global shellenv)"
     '';
   };
 

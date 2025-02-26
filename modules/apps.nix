@@ -14,7 +14,10 @@
       cleanup = "zap";
     };
     taps = [ "homebrew/services" "nikitabobko/tap" ];
-    brews = [ "icu4c" ];
+    brews = [ 
+      "icu4c" 
+      "mkcert"
+    ];
     casks = [
       "1password"
       "1password-cli"
