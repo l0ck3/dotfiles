@@ -24,6 +24,7 @@
       "aerospace"
       "arc"
       "clickup"
+      "cloudflare-warp"
       "cursor"
       "diffusionbee"
       "google-chrome"
