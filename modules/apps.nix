@@ -13,10 +13,12 @@
       autoUpdate = false;
       cleanup = "zap";
     };
-    taps = [ "homebrew/services" "nikitabobko/tap" ];
+    taps = [ "homebrew/bundle" "homebrew/services" "nikitabobko/tap" ];
     brews = [ 
       "icu4c" 
       "mkcert"
+      "railway"      
+      "watch"
     ];
     casks = [
       "1password"
@@ -31,15 +33,15 @@
       "guitar-pro"
       "karabiner-elements"
       "kdrive"
+      "notion-calendar"
       "obsidian"
       "orbstack"
       "nordvpn"
       "raycast"
       "setapp"
       "spotify"
-      "tuxguitar"
       "wezterm"
-      "windsurf"
+      "zen"
     ];
     masApps = { "Perplexity" = 6714467650; };
   };

@@ -1,20 +1,21 @@
 { pkgs, lib, ... }:
 
 {
+  # because it is managed by the determinate daemon
+  nix.enable = false;
+  
   # enable flakes globally
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
-
   nix.package = pkgs.nix;
 
   # do garbage collection weekly to keep disk usage low
   nix.gc = {
-    automatic = lib.mkDefault true;
+    # Disabled because of latest updates
+    # automatic = lib.mkDefault true; 
     options = lib.mkDefault "--delete-older-than 7d";
   };
 

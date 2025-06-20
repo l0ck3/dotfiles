@@ -61,7 +61,7 @@ config.keys = {
     key = 'DownArrow',
     mods = 'SHIFT|CMD',
     action = wezterm.action.ActivatePaneDirection 'Down',
-  },        
+  },
   {
     key = 'w',
     mods = 'CMD|SHIFT',
@@ -76,13 +76,13 @@ config.keys = {
     key = 'RightArrow',
     mods = 'OPT',
     action = wezterm.action.SendString '\x1bf',
-  },  
+  },
   {
     key = ',',
     mods = 'CMD',
     action = wezterm.action.SpawnCommandInNewWindow {
       cwd = wezterm.home_dir,
-      args = { 'windsurf', 'dotfiles' },
+      args = { 'cursor', 'dotfiles' },
     },
   },
   -- {

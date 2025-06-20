@@ -2,16 +2,16 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    initExtra = ''
+    initContent = ''
       export ERL_AFLAGS="-kernel shell_history enabled"
-      eval "$(devbox global shellenv)"
+      eval "$(devbox global shellenv --init-hook)"
       PATH="/Users/l0ck3/.bun/bin:$PATH"
     '';
   };
 
   home.shellAliases = {
     k = "kubectl";
-    "switch!" = "darwin-rebuild switch --flake .#${hostname}";
+    "switch!" = "sudo darwin-rebuild switch --flake .#${hostname}";
     "reload!" = "source ~/.zshrc";
     "gst" = "git status";
     "cd" = "z";
