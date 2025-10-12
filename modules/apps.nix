@@ -13,11 +13,13 @@
       autoUpdate = false;
       cleanup = "zap";
     };
-    taps = [ "homebrew/bundle" "homebrew/services" "nikitabobko/tap" ];
+    taps = [ "homebrew/bundle" "homebrew/services" "nikitabobko/tap"  "supabase/tap"];
     brews = [ 
       "icu4c" 
       "mkcert"
-      "railway"      
+      "railway"    
+      "supabase"  
+      "uv"
       "watch"
     ];
     casks = [
@@ -29,6 +31,7 @@
       "cloudflare-warp"
       "cursor"
       "diffusionbee"
+      "flox"
       "google-chrome"
       "guitar-pro"
       "karabiner-elements"
@@ -40,6 +43,7 @@
       "raycast"
       "setapp"
       "spotify"
+      "visual-studio-code"
       "wezterm"
       "zen"
     ];
