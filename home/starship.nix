@@ -7,8 +7,8 @@
 
     settings = {
       custom.flox = {
-        command = "if [ -n \"$FLOX_ENV\" ]; then echo \"in Flox env: $FLOX_ENV_DESCRIPTION\"; fi";
-        when = "[ -n \"$FLOX_ENV\" ]";
+        command = "if [ -n \"$FLOX_ENV\" ]; then echo \"in flox env: $FLOX_ENV_DESCRIPTION\"; fi";
+        when = "[ -n \"$FLOX_ENV\" ] && [ \"$FLOX_ENV_DESCRIPTION\" != \"default\" ]";
         format = "[[$output]($style)]($style) ";
         style = "bold green";
         description = "Show active Flox environment";
