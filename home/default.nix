@@ -8,7 +8,6 @@
     ./git.nix
     ./starship.nix
     ./wezterm.nix
-    ./aerospace.nix
     ./flox.nix
   ];
 

@@ -19,6 +19,7 @@ config.set_environment_variables = {
 }
 
 config.keys = {
+  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},
   {
     key = 'd',
     mods = 'CMD',

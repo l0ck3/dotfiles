@@ -10,13 +10,14 @@
   homebrew = {
     enable = true;
     onActivation = {
-      autoUpdate = false;
+      autoUpdate = true;
       cleanup = "zap";
     };
     taps = [ "homebrew/bundle" "homebrew/services" "nikitabobko/tap"  "supabase/tap"];
     brews = [ 
       "icu4c" 
       "mkcert"
+      "node"
       "railway"    
       "supabase"  
       "uv"
@@ -25,12 +26,10 @@
     casks = [
       "1password"
       "1password-cli"
-      "aerospace"
       "arc"
-      "clickup"
+      "claude-code"
       "cloudflare-warp"
       "cursor"
-      "diffusionbee"
       "flox"
       "google-chrome"
       "guitar-pro"
