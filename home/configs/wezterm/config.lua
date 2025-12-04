@@ -19,7 +19,7 @@ config.set_environment_variables = {
 }
 
 config.keys = {
-  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},
+  { key = "Enter", mods = "SHIFT", action = wezterm.action { SendString = "\x1b\r" } },
   {
     key = 'd',
     mods = 'CMD',
@@ -85,6 +85,18 @@ config.keys = {
       cwd = wezterm.home_dir,
       args = { 'cursor', 'dotfiles' },
     },
+  },
+  {
+    key = 'Enter',
+    mods = 'SHIFT',
+    action = wezterm.action.SendString('\\\r\n'),
+  },
+
+  -- (Optional) Ctrl+Enter as an alternative multiline shortcut
+  {
+    key = 'Enter',
+    mods = 'CTRL',
+    action = wezterm.action.SendString('\\\r\n'),
   },
   -- {
   --   key = 'p',
