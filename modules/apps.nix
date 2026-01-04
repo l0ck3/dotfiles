@@ -13,13 +13,14 @@
       autoUpdate = true;
       cleanup = "zap";
     };
-    taps = [ "homebrew/bundle" "homebrew/services" "nikitabobko/tap"  "supabase/tap"];
-    brews = [ 
+    taps = [ "steveyegge/beads"];
+    brews = [
+      "bd"
+      "elixir" 
       "icu4c" 
       "mkcert"
       "node"
       "railway"    
-      "supabase"  
       "uv"
       "watch"
     ];
