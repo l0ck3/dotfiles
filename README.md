@@ -51,20 +51,17 @@ chezmoi update
 
 ## Fresh Install
 
-Setting up on a new machine:
+One command to set up a new machine:
 
 ```bash
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/l0ck3/dotfiles/main/setup.sh | bash
+```
 
-# Install chezmoi and initialize from repo
-brew install chezmoi
-chezmoi init --apply <git-repo-url>
+This installs Homebrew, chezmoi, applies dotfiles, and installs all Homebrew packages.
 
-# Install Homebrew packages
-brew bundle install --file=~/Brewfile
+After setup, optionally apply macOS preferences:
 
-# Apply macOS system preferences (optional)
+```bash
 bash ~/macos-defaults.sh
 ```
 
