@@ -1,0 +1,37 @@
+[user]
+    name = l0ck3
+    email = yann@neurd.tech
+
+[init]
+    defaultBranch = main
+
+[push]
+    autoSetupRemote = true
+
+[pull]
+    rebase = true
+
+[core]
+    pager = /opt/homebrew/bin/delta
+
+[delta]
+    features = side-by-side
+
+[alias]
+    br = branch
+    co = checkout
+    st = status
+    ls = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate
+    ll = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat
+    cm = commit -m
+    ca = commit -am
+    dc = diff --cached
+    amend = commit --amend -m
+    update = submodule update --init --recursive
+    foreach = submodule foreach
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
